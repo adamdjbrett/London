@@ -1,0 +1,15 @@
+---
+layout: layouts/default.hbs
+title: Home
+---
+{{#if metadata.description}}
+<header class="page-head">
+  <h2 class="page-head-title">{{metadata.description}}</h2>
+</header>
+{{/if}}
+
+<div class="post-feed gh-feed">
+  {{#each collections.posts}}
+    {{> "post-card" post=this index=@index}}
+  {{/each}}
+</div>

@@ -1,0 +1,20 @@
+---
+layout: layouts/default.hbs
+---
+<article class="post-content post h-entry">
+
+  <header class="post-content-header gh-canvas">
+    <h1 class="post-content-title p-name">{{title}}</h1>
+    {{#if description}}
+      <p class="post-content-excerpt">{{description}}</p>
+    {{/if}}
+    {{> "feature-image"}}
+  </header>
+
+  <div class="post-content-body gh-content gh-canvas e-content">
+    {{{ content }}}
+  </div>
+
+</article>
+
+{{> "pswp"}}

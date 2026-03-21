@@ -1,0 +1,10 @@
+<article class="post-card {{#ifNth index 3}}post-card-large{{/ifNth}} {{postClass post}}">
+  <a class="post-card-link" href="{{post.url}}">
+    {{#if post.data.feature_image}}
+      <img src="{{post.data.feature_image}}" alt="{{post.data.title}}">
+    {{/if}}
+    <div class="post-card-content">
+      <h2 class="post-card-title">{{post.data.title}}</h2>
+    </div>
+  </a>
+</article>

@@ -1,38 +1,40 @@
-# London
+# London (Eleventy Port)
 
-A custom, image-centric theme for [Ghost](https://github.com/TryGhost/Ghost). Made for publishers and portfolios with plenty of graphics to show off to the world.
+Eleventy port of the original London theme by TryGhost.
 
-**Demo: https://london.ghost.io**
+- Original theme: https://github.com/TryGhost/London
+- Design target: London HTML/CSS structure and visual style
 
-# Instructions
+## Requirements
 
-1. [Download this theme](https://github.com/TryGhost/London/archive/main.zip)
-2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+- Node.js 18+
 
-# Development
+## Install
 
-Edition styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
-
-```bash
-# Install
-yarn
-
-# Run build & watch for changes
-yarn dev
+```sh
+npm install
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+## Local development
 
-The `zip` Gulp task packages the theme files into `dist/london.zip`, which you can then upload to your site.
-
-```bash
-yarn zip
+```sh
+npm run start
 ```
 
-# Contribution
+## Production build
 
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+```sh
+npm run build
+```
 
-# Copyright & License
+Output is generated in `_site/`.
 
-Copyright (c) 2013-2026 Ghost Foundation - Released under the [MIT license](LICENSE).
+## Notes
+
+- Uses Eleventy `3.1.5`
+- Uses a simple global data file: `_data/metadata.json`
+
+## License
+
+Copyright (c) Ghost Foundation and contributors.
+Released under the MIT license in [LICENSE](LICENSE).

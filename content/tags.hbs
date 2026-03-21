@@ -1,0 +1,21 @@
+---
+layout: layouts/default.hbs
+title: Tags
+permalink: /tags/index.html
+---
+<header class="page-head">
+  <h1 class="page-head-title">Tags</h1>
+  <p class="page-head-description">A collection of {{collections.tagList.length}} tags</p>
+</header>
+
+<div class="post-feed gh-feed">
+  {{#each collections.tagList}}
+  <article class="post-card no-image">
+    <a class="post-card-link" href="/tags/#{{this}}">
+      <div class="post-card-content">
+        <h2 class="post-card-title">#{{this}}</h2>
+      </div>
+    </a>
+  </article>
+  {{/each}}
+</div>
