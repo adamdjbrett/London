@@ -4,6 +4,8 @@ import Handlebars from "handlebars";
 import { DateTime } from "luxon";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
 
 function registerPartials() {
   const partialsDir = path.join(process.cwd(), "_includes", "partials");
@@ -40,6 +42,14 @@ const normalizePath = (value = "/") => {
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
+
+  const md = markdownIt({
+    html: true,
+    breaks: false,
+    linkify: true,
+    typographer: true
+  }).use(markdownItFootnote);
+  eleventyConfig.setLibrary("md", md);
 
   registerPartials();
 

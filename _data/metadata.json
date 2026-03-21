@@ -1,19 +1,17 @@
 {
   "title": "London",
-  "description": "A classic publication theme converted from Ghost to Eleventy.",
+  "description": "A bold, minimal theme for Ghost, focused on clean typography & beautiful imagery",
   "language": "en",
   "author": "TryGhost",
-  "url": "https://example.com",
+  "url": "http://localhost:8080",
   "logo": null,
   "icon": "/favicon.ico",
   "navigation": [
     { "label": "Home", "url": "/", "slug": "home" },
     { "label": "About", "url": "/about/", "slug": "about" },
-    { "label": "Contact", "url": "/contact/", "slug": "contact" },
-    { "label": "Tags", "url": "/tags/", "slug": "tags" }
+    { "label": "Style Guide", "url": "/tags/", "slug": "style-guide" },
+    { "label": "Author", "url": "/about/", "slug": "author" },
+    { "label": "Collection", "url": "/tags/", "slug": "collection" }
   ],
-  "secondaryNavigation": [
-    { "label": "Feed", "url": "/feed/feed.xml", "slug": "feed" },
-    { "label": "Sitemap", "url": "/sitemap.xml", "slug": "sitemap" }
-  ]
+  "secondaryNavigation": null
 }
