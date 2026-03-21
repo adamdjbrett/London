@@ -5,7 +5,7 @@
   "author": "TryGhost",
   "url": "http://localhost:8080",
   "logo": null,
-  "icon": "/favicon.ico",
+  "icon": "/assets/images/11ty.svg",
   "navigation": [
     { "label": "Home", "url": "/", "slug": "home" },
     { "label": "About", "url": "/about/", "slug": "about" },
